@@ -9,6 +9,8 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import logo from '../images/NanoGift.svg'
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+
 
 type fancyLinkProps = {
   link: string,
@@ -39,9 +41,10 @@ export default function Home() {
         <title>Nano Giveaway</title>
         <link rel="canonical" href="https://www.nanogiveaway.com/" />
       </Helmet>
-      <div className="containerbackground dark:bg-gray-800/[.20] dark:border-gray-700 rounded-lg text-slate-400 px-2 italic text-4xl md:text-6xl text-center">
+      {/* <div className="containerbackground dark:bg-gray-800/[.20] dark:border-gray-700 rounded-lg text-slate-400 px-2 italic text-4xl md:text-6xl text-center">
         Coming Soon!
-      </div>
+      </div> */}
+
       <div
         className="p-10 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800/[.50] dark:border-gray-700">
         <Title> <img style={{ height: '1.5em', display: 'inline' }} src={logo} alt="Logo" /> Nano Giveaway!</Title>
@@ -52,6 +55,21 @@ export default function Home() {
           <FancyLink link="https://reddit.com/r/NanoGiveaway" iconvalue={<FontAwesomeIcon icon={faReddit} size="lg" />} text1="(Coming soon)" text2="Reddit" bg_color='dark:bg-gray-700' />
           <FancyLink link="https://discord.gg/xno" iconvalue={<FontAwesomeIcon icon={faDiscord} size="lg" />} text1="Join our community on" text2="Discord" bg_color='dark:bg-blue-700' />
         </div>
+      </div>
+      <div className="rounded-lg text-center border mt-4 dark:border-gray-900 md:w-6/7 px-20 dark:bg-gray-800/[.40]">
+        <TwitterTimelineEmbed
+          autoHeight
+          noHeader
+          onLoad={function noRefCheck() { }}
+          options={{
+            height: 400
+          }}
+          screenName="nanogiveaway"
+          sourceType="profile"
+          theme="dark"
+          tweetLimit={7}
+        />
+
       </div>
     </main>
   );
