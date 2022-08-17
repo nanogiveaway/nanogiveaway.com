@@ -24,6 +24,10 @@ module.exports = {
         "gray-800": "#1F2937",
         "gray-900": "#111827",
       },
+      fontFamily: {
+        headings: "Montserrat",
+        content: "Open Sans",
+      },
     },
   },
   plugins: [],
