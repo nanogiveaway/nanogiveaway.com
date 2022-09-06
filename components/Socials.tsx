@@ -23,27 +23,27 @@ const socials: SocialItem[] = [
     Icon: (props) => <FaTwitch {...props} />,
     color: "#9146ff",
   },
-  {
-    name: "Reddit",
-    url: "https://reddit.com/r/NanoGiveaway",
-    actionText: "Browse our subreddit",
-    Icon: (props) => <FaReddit {...props} />,
-    color: "#ff4500",
-  },
+  // {
+  //   name: "Reddit",
+  //   url: "https://reddit.com/r/NanoGiveaway",
+  //   actionText: "Browse our subreddit",
+  //   Icon: (props) => <FaReddit {...props} />,
+  //   color: "#ff4500",
+  // },
 ];
 
 const Socials = ({ className = "" }) => {
   return (
     <ul className={className}>
       {socials.map(({ name, url, Icon, actionText, color }) => (
-        <li key={name}>
+        <li key={name} className="lg:w-36">
           <a
             href={url}
             style={{ backgroundColor: color }}
-            className="flex gap-x-4 rounded p-4"
+            className="flex items-center gap-x-4 rounded p-4 transition-all hover:-translate-y-2 hover:shadow-lg hover:shadow-gray hover:ring hover:ring-light focus:outline-none focus-visible:ring focus-visible:ring-light"
           >
             <Icon className="h-6 w-6" />
-            <span>{name}</span>
+            <span className="md:text-xl">{name}</span>
           </a>
         </li>
       ))}

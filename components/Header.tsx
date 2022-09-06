@@ -4,10 +4,8 @@ const NanoGiveaway = ({ className = "" }) => {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="700"
       zoomAndPan="magnify"
       viewBox="0 0 525 308.999992"
-      height="412"
       preserveAspectRatio="xMidYMid meet"
       version="1.0"
     >
@@ -119,10 +117,10 @@ const NanoGiveaway = ({ className = "" }) => {
   );
 };
 
-const Header = () => {
+const Header = ({ className = "" }) => {
   return (
-    <header className="flex items-center justify-center">
-      <NanoGiveaway className="h-52 w-full" />
+    <header className={className}>
+      <NanoGiveaway className="max-w-lg md:max-w-xl" />
     </header>
   );
 };
