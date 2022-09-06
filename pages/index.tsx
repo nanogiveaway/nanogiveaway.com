@@ -9,6 +9,10 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Nano Giveaway</title>
+        <meta
+          name="description"
+          content="Website of the Nano Giveaway community"
+        />
       </Head>
       <div className="min-h-full">
         <Header className="flex items-center justify-center" />
