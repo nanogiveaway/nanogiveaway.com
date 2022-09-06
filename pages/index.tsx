@@ -1,16 +1,19 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import Discord from "../components/Discord";
+import Header from "../components/Header";
+import Socials from "../components/Socials";
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Nano Giveaway | Home</title>
+        <title>Nano Giveaway</title>
       </Head>
-      <main className="bg-dark text-white min-h-full w-full flex flex-col justify-center">
-        <section className="">
-          <h1 className="text-8xl font-headings text-center">Hello!</h1>
-        </section>
+      <main className="min-h-full w-full">
+        <Header />
+        <Socials className="flex flex-col px-4 gap-y-4 mb-7" />
+        <Discord className="h-96 w-full px-4" />
       </main>
     </>
   );
