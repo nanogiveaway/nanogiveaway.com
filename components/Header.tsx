@@ -121,8 +121,8 @@ const NanoGiveaway = ({ className = "" }) => {
 
 const Header = () => {
   return (
-    <header className="flex justify-center items-center">
-      <NanoGiveaway className="w-full h-52" />
+    <header className="flex items-center justify-center">
+      <NanoGiveaway className="h-52 w-full" />
     </header>
   );
 };

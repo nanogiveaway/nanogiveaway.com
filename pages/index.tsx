@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="min-h-full w-full">
         <Header />
-        <Socials className="flex flex-col px-4 gap-y-4 mb-7" />
+        <Socials className="mb-7 flex flex-col gap-y-4 px-4" />
         <Discord className="h-96 w-full px-4" />
       </main>
     </>

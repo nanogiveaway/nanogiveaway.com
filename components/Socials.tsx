@@ -40,9 +40,9 @@ const Socials = ({ className = "" }) => {
           <a
             href={url}
             style={{ backgroundColor: color }}
-            className="flex gap-x-4 p-4 rounded"
+            className="flex gap-x-4 rounded p-4"
           >
-            <Icon className="w-6 h-6" />
+            <Icon className="h-6 w-6" />
             <span>{name}</span>
           </a>
         </li>
